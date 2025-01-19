@@ -1,6 +1,6 @@
 ---
 title: "Assignment 1: Introduction"
-author: "Student Name"
+author: Nilab Ahmadi
 output: pdf_document
 ---
 
@@ -22,22 +22,27 @@ Enter answers to the questions just below the >Answer: prompt.
 
 1. What are your previous experiences with data analytics, R, and Git? Include both formal and informal training.
 
-> Answer: 
+> Answer: I don't have any previous experience with R and Git. However, I have used Statistics and I have taken Stats courses at the Sanford School of Public Policy.
+
 
 2. Are there any components of the course about which you feel confident?
 
-> Answer: 
+> Answer: Although R is a new analytical course for me, and I don’t have any prior experience with it, I feel confident about my ability to learn. I believe I am a fast learner and can quickly grasp whatever I practice in class. I'm a fast learner and can learn whatever I practice in class very fast.
+
 
 3. Are there any components of the course about which you feel apprehensive?
 
-> Answer: 
+> Answer: I don't feel so apprehensive about the class as I think the instructors and TAs are very helpful. The class materials, including recordings and instructions, are pretty helpful. 
 
 
 ## 2) GitHub
 
 Provide a link below to your forked course repository in GitHub. Make sure you have pulled all recent changes from the course repository and that you have updated your course README file, committed those changes, and pushed them to your GitHub account. 
 
-> Answer: 
+> Answer: I have included two links as I was not sure which one is more convenient for you to look into the changes.
+
+https://github.com/Nilab23/EDA_Spring2025
+https://github.com/Nilab23/EDA_Spring2025/tree/main/Assignments
 
 ## 3) Knitting
 When you have completed this document, click the `knit` button.This should produce a PDF copy of your markdown document. Submit this PDF to Canvas 
