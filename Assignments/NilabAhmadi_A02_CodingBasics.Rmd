@@ -88,7 +88,30 @@ evaluate_score_ifelse <- function(score) {
 
 12. Run both functions using the value 52.5 as the input
 
+# Function using 'if'....'else'
+evaluate_score <- function(score) {
+  if (score > 50) {
+    print("Pass")
+  } else {
+    print("Fail")
+  }
+}
+
+# Function using 'ifelse'
+evaluate_score_ifelse <- function(score) {
+  print(ifelse(score > 50, "Pass", "Fail"))
+}
+
+# Run both functions with 52.5 as input
+evaluate_score(52.5)       
+evaluate_score_ifelse(52.5) 
+
+
 13. Run both functions using the **vector** of student test scores you created as the input. (Only one will work properly...)
+
+
+evaluate_score(test_scores)  
+evaluate_score_ifelse(test_scores)
 
 ```{r basics 3}
 #10. Create a function using if...else
