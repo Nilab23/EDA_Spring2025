@@ -1,0 +1,112 @@
+---
+title: "Assignment 2: Coding Basics"
+author: "Nilab Ahmadi"
+output: pdf_document
+geometry: margin=2.54cm
+editor_options: 
+  chunk_output_type: console
+---
+
+## OVERVIEW
+
+This exercise accompanies the lessons/labs in Environmental Data Analytics on coding basics.
+
+## Directions
+
+1.  Rename this file `<FirstLast>_A02_CodingBasics.Rmd` (replacing `<FirstLast>` with your first and last name).
+2.  Change "Student Name" on line 3 (above) with your name.
+3.  Work through the steps, **creating code and output** that fulfill each instruction.
+4.  Be sure to **answer the questions** in this assignment document.
+5.  When you have completed the assignment, **Knit** the text and code into a single PDF file.
+6.  After Knitting, submit the completed exercise (PDF file) to Canvas.
+
+## Basics, Part 1
+
+1.  Generate a sequence of numbers from one to 55, increasing by fives. Assign this sequence a name.
+
+2.  Compute the mean and median of this sequence.
+
+3.  Ask R to determine whether the mean is greater than the median.
+
+4.  Insert comments in your code to describe what you are doing.
+
+```{r basics 1}
+#1. # I created numbers from 1 to 50 and and increased by fives
+number_sequence <- seq(from = 1, to = 55, by = 5) 
+
+#2. I'm defining the numbers
+number_sequence <- c(1,6,11,16,21,26,31,36,41,46,51)
+
+#3. I calculated the mean of the assigned numbers
+mean(number_sequence)
+
+#4.I calculated the median of the assigned numbers 
+median(number_sequence)
+
+#5. # I asked R to determine whether the mean is greater than the median
+26 > 26
+
+```
+
+## Basics, Part 2
+
+5.  Create three vectors, each with four components, consisting of (a) student names, (b) test scores, and (c) whether they are on scholarship or not (TRUE or FALSE).
+
+6.  Label each vector with a comment on what type of vector it is.
+
+7.  Combine each of the vectors into a data frame. Assign the data frame an informative name.
+
+8.  Label the columns of your data frame with informative titles.
+
+```{r basics 2}
+# (a) Vector of students
+student_names <- c("Nilab" , "Ahmad" , "Azar" , "Ali")
+
+# (b) Vector of test scores 
+test_scores <- c(60, 70, 80, 90)
+
+# (c) Vector indicating whether they are on scholarship or not
+scholarship_status <- c(TRUE , FALSE , TRUE , FALSE)
+
+# Now I'm combining each of the vectors into a data frame and assign the data frame an informative name. I'm also naming each column of the data frame with informative name (e.g.,Name, Score, and Scholarship)
+students_data <- data.frame(Name = student_names , Score = test_scores , Scholarship = scholarship_status)
+```
+
+9.  QUESTION: How is this data frame different from a matrix?
+
+> Answer:Data frame can contain different types of data for example numbers, charachter, and logical in different columns. However, Matrix can only contain signle data type. For example, all of the data should be numbers, or characters.
+
+10. Create a function with one input. In this function, use `if`...`else` to evaluate the value of the input: if it is greater than 50, print the word "Pass"; otherwise print the word "Fail". 
+
+evaluate_score <- function(score) {                                                                                       if (score > 50) print ("Pass") else print ("fail")                                                                      }
+
+11. Create a second function that does the exact same thing as the previous one but uses `ifelse()` instead if `if`...`else `. 
+
+evaluate_score_ifelse <- function(score) {
+  print(ifelse(score > 50, "Pass", "Fail"))
+}
+
+12. Run both functions using the value 52.5 as the input
+
+13. Run both functions using the **vector** of student test scores you created as the input. (Only one will work properly...)
+
+```{r basics 3}
+#10. Create a function using if...else
+
+#11. Create a function using ifelse()
+
+#12a. Run the first function with the value 52.5
+
+#12b. Run the second function with the value 52.5
+
+#13a. Run the first function with the vector of test scores
+
+#13b. Run the second function with the vector of test scores
+```
+
+14. QUESTION: Which option of `if`...`else` vs. `ifelse` worked? Why? (Hint: search the web for "R vectorization")
+
+> Answer:
+
+
+**NOTE** Before knitting, you'll need to comment out the call to the function in Q13 that does not work. (A document can't knit if the code it contains causes an error!)
