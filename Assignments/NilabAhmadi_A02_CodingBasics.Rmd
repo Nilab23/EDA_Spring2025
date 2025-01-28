@@ -67,7 +67,7 @@ test_scores <- c(60, 70, 80, 90)
 scholarship_status <- c(TRUE , FALSE , TRUE , FALSE)
 
 # Now I'm combining each of the vectors into a data frame and assign the data
-#frame an informative name. I'm also naming each column of the data frame with informative name (e.g.,Name, Score, and Scholarship)
+#frame an informative name. I'm also naming each column of the data frame with #informative name (e.g.,Name, Score, and Scholarship)
 students_data <- data.frame(Name = student_names , Score = test_scores ,
                             Scholarship = scholarship_status)
 ```
