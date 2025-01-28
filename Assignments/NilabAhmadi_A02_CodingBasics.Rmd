@@ -34,13 +34,13 @@ This exercise accompanies the lessons/labs in Environmental Data Analytics on co
 #1. # I created a sequence of numbers from 1 to 55 and and increased by five
 seq1 <- seq(1, 55, 5)
 
-#3. I calculated the mean of the assigned numbers
+#3. I calculated the mean of the assigned numbers.The mean is 26.
 mean(seq1)
 
-#4.I calculated the median of the assigned numbers 
+#4.I calculated the median of the assigned numbers. The median is also 26.
 median(seq1)
 
-#5. # I asked R to determine whether the mean is greater than the median
+#5. # I asked R to determine whether the mean is greater than the median. The result is false because the mean and median are equal.
 mean(seq1) > median(seq1)
 
 ```
@@ -75,43 +75,16 @@ students_data <- data.frame(Name = student_names , Score = test_scores , Scholar
 
 10. Create a function with one input. In this function, use `if`...`else` to evaluate the value of the input: if it is greater than 50, print the word "Pass"; otherwise print the word "Fail". 
 
-evaluate_score <- function(score) {
-if (score > 50) {
-print ("Pass") 
-} 
-else {
-print ("fail")
-}
-
-}
-
 11. Create a second function that does the exact same thing as the previous one but uses `ifelse()` instead if `if`...`else `. 
-
-evaluate_score_ifelse <- function(score) {print(ifelse(score > 50, "Pass", "Fail"))}
 
 12. Run both functions using the value 52.5 as the input
 
-# Function using 'if'....'else'
-evaluate_score <- function(score) { if (score > 50) {print("Pass") } else print("Fail")}
-
-# Function using 'ifelse'
-evaluate_score_ifelse <- function(score) {print(ifelse(score > 50, "Pass", "Fail"))}
-
-# Run both functions with 52.5 as input
-evaluate_score(52.5)       
-evaluate_score_ifelse(52.5) 
-
-
 13. Run both functions using the **vector** of student test scores you created as the input. (Only one will work properly...)
-
-evaluate_score(test_scores)  
-evaluate_score_ifelse(test_scores) 
-# The ifelse option worked 
 
 ```{r basics 3}
 #10. Create a function using if...else
 
-evaluate_score <- function(score) {
+function1 <- function(score) {
 if (score > 50) {
 print ("Pass") 
 } 
@@ -133,16 +106,16 @@ function1(52.5)
 function2(52.5) 
 
 #13a. Run the first function with the vector of test scores
-function1(test_scores)
+function1(test_scores) #I got error running this code
 
 #13b. Run the second function with the vector of test scores
-function2(test_scores)
+function2(test_scores) #I did not get any errors running this code
 
 ```
 
 14. QUESTION: Which option of `if`...`else` vs. `ifelse` worked? Why? (Hint: search the web for "R vectorization")
 
-> Answer:
+> Answer: The option 'if'....'self' did not work beacuse the statements in R are not vectorized and expect a single logical condition. However, ifself worked because the R victorized and it accepts different types of data not just single data.
 
 
 **NOTE** Before knitting, you'll need to comment out the call to the function in Q13 that does not work. (A document can't knit if the code it contains causes an error!)
