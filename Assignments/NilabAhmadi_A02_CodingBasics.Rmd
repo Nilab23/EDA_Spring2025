@@ -106,7 +106,8 @@ function1(52.5)
 function2(52.5) 
 
 #13a. Run the first function with the vector of test scores
-function1(test_scores) #I got error running this code
+#function1(test_scores) #I got error running this code
+
 
 #13b. Run the second function with the vector of test scores
 function2(test_scores) #I did not get any errors running this code
