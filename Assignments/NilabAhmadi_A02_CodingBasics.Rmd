@@ -40,7 +40,8 @@ mean(seq1)
 #4.I calculated the median of the assigned numbers. The median is also 26.
 median(seq1)
 
-#5. # I asked R to determine whether the mean is greater than the median. The result is false because the mean and median are equal.
+#5. # I asked R to determine whether the mean is greater than the median.
+#The result is false because the mean and median are equal.
 mean(seq1) > median(seq1)
 
 ```
@@ -65,13 +66,16 @@ test_scores <- c(60, 70, 80, 90)
 # (c) Vector indicating whether they are on scholarship or not
 scholarship_status <- c(TRUE , FALSE , TRUE , FALSE)
 
-# Now I'm combining each of the vectors into a data frame and assign the data frame an informative name. I'm also naming each column of the data frame with informative name (e.g.,Name, Score, and Scholarship)
-students_data <- data.frame(Name = student_names , Score = test_scores , Scholarship = scholarship_status)
+# Now I'm combining each of the vectors into a data frame and assign the data
+#frame an informative name. I'm also naming each column of the data frame with informative name (e.g.,Name, Score, and Scholarship)
+students_data <- data.frame(Name = student_names , Score = test_scores ,
+                            Scholarship = scholarship_status)
 ```
 
 9.  QUESTION: How is this data frame different from a matrix?
 
-> Answer:Data frame can contain different types of data for example numbers, charachter, and logical in different columns. However, Matrix can only contain signle data type. For example, all of the data should be numbers, or characters.
+> Answer:Data frame can contain different types of data for example numbers, charachter, and logical in different columns. However, Matrix can only 
+#contain signle data type. For example, all of the data should be numbers, or characters.
 
 10. Create a function with one input. In this function, use `if`...`else` to evaluate the value of the input: if it is greater than 50, print the word "Pass"; otherwise print the word "Fail". 
 
@@ -116,7 +120,10 @@ function2(test_scores) #I did not get any errors running this code
 
 14. QUESTION: Which option of `if`...`else` vs. `ifelse` worked? Why? (Hint: search the web for "R vectorization")
 
-> Answer: The option 'if'....'self' did not work beacuse the statements in R are not vectorized and expect a single logical condition. However, ifself worked because the R victorized and it accepts different types of data not just single data.
+> Answer: The option 'if'....'self' did not work beacuse the statements in 
+R are not vectorized and expect a single logical condition.
+#However, ifself worked because the R victorized and it accepts different types 
+of data not just single data.
 
 
 **NOTE** Before knitting, you'll need to comment out the call to the function in Q13 that does not work. (A document can't knit if the code it contains causes an error!)
