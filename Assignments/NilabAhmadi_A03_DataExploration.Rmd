@@ -124,6 +124,8 @@ str(Neonics)
 # Viewing the few first rows
 head(Neonics)
 
+view(Neonics)
+
 ```
 
 6.  Using the `summary` function on the "Effect" column, determine the most common effects that are studied. Why might these effects specifically be of interest? [Tip: The `sort()` command is useful for listing the values in order of magnitude...]
@@ -219,12 +221,11 @@ those of labs, but they subsequently experienced a decline 2010-2020.
 [**TIP**: Add `theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))` to the end of your plot command to rotate and align the X-axis labels...]
 
 ```{r}
-#This is the correct code       
+# creating a bar graph of endpoints    
 ggplot(Neonics) +
 geom_bar(aes(x=Endpoint)) +
  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))   
 
-head(endpoint_counts)
            
 ```
 
@@ -243,7 +244,8 @@ compared to controls.
 12. Determine the class of collectDate. Is it a date? If not, change to a date and confirm the new class of the variable. Using the `unique` function, determine which dates litter was sampled in August 2018.
 
 ```{r}
-# I'm checking the class of the collectDate and I see that is a factor not a date
+# I'm checking the class of the collectDate and I see that is a factor not 
+#a date
 class(Litter$collectDate)
 
 # Now, I'm converting the factor to date 
@@ -251,7 +253,8 @@ Litter$collectDate <- as.Date(Litter$collectDate, format='%Y-%m-%d')
 
 class(Litter$collectDate)
 
-# Now, I'm checking which dates the Litter was sampled. After running the code, I can see the Litter was sampled with dates (2018-08-02 2018-08-30)
+# Now, I'm checking which dates the Litter was sampled. After running the code,
+#I can see the Litter was sampled with dates (2018-08-02 2018-08-30)
 unique(Litter$collectDate)
 
 ```
@@ -296,7 +299,8 @@ geom_violin(aes(y=dryMass, x=functionalGroup))
 Why is the boxplot a more effective visualization option than the violin plot in this case?
 
 > Answer:The boxplot is more effective because of the data distribution clarity. 
-Furthermore,the boxplot is simple and readable. However, the violin plot is not as readable as boxplot and the distribution of the data is not also clear.
+Furthermore,the boxplot is simple and readable. However, the violin plot is not 
+as readable as boxplot and the distribution of the data is not also clear.
 
 What type(s) of litter tend to have the highest biomass at these sites?
 
