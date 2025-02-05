@@ -190,7 +190,6 @@ the data is so inconsistent.
 
 ```{r Plotting the data}
   
-
 # Now I'm generating the number of studies conducted by publication year
 ggplot(Neonics,aes(x=Publication.Year)) +
   geom_freqpoly()
@@ -200,6 +199,7 @@ ggplot(Neonics,aes(x=Publication.Year)) +
 10. Reproduce the same graph but now add a color aesthetic so that different Test.Location are displayed as different colors.
 
 ```{r Creating color graph}
+#I'm making the the graph colorful by adding color to the bracket
 ggplot(Neonics, aes(x=Publication.Year, color = Test.Location)) +
          geom_freqpoly()
 
@@ -251,6 +251,7 @@ class(Litter$collectDate)
 # Now, I'm converting the factor to date 
 Litter$collectDate <- as.Date(Litter$collectDate, format='%Y-%m-%d')
 
+# Double checking the class
 class(Litter$collectDate)
 
 # Now, I'm checking which dates the Litter was sampled. After running the code,
@@ -287,9 +288,11 @@ geom_bar(aes(x=functionalGroup))
 15. Using `geom_boxplot` and `geom_violin`, create a boxplot and a violin plot of dryMass by functionalGroup.
 
 ```{r Boxplot and Violin Graphs}
+#creating the box plot
 ggplot(Litter) +
 geom_boxplot(aes(y=dryMass, x=functionalGroup))
 
+#creating the violin plot
 ggplot(Litter) +
 geom_violin(aes(y=dryMass, x=functionalGroup))
 
