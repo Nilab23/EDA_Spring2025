@@ -189,7 +189,7 @@ final_tidy_data <- Wrangled_data %>%
     names_from = AQS_PARAMETER_DESC,
     values_from = mean_AQI)
 
-#10 checling the dimension of the dataset
+#10 checking the dimension of the dataset
 dim(final_tidy_data)
 
 #11 saving the processed data
@@ -218,6 +218,7 @@ summary_data <- final_tidy_data %>%
     ) %>% 
   
   #na.omit(mean_Ozone)
+  
 drop_na(mean_Ozone)
 
 #13
@@ -235,5 +236,7 @@ missing value across all columns, which can drastically reduce the dataset size
 and potentially discard valuable information. This selective approach helps 
 retain a more comprehensive and informative dataset for analysis, particularly
 when some missing values are in non-essential columns.I have also replaced 
-drop_na with na.omit and the dimesnion has changed from 8976 9 to 182 5, 
-which means na.omit has reduced the dataset size significantly.
+drop_na with na.omit and the dimesnion has changed from 8976 9 to 101 5, 
+which means na.omit has reduced the dataset size significantly.However, when I 
+use the drop_na, it is going to be 182 5. I also found that with having 
+omit.na, the knit option does not work.
