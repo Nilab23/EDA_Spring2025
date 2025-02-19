@@ -38,7 +38,9 @@ library(tidyverse) ; library(lubridate) ; library(here); library(cowplot)
 getwd()
 
 #2 Now, I'm reading in the required data 
-PeterPaul.chem.nutrients <- read.csv(here                                ("Data/Processed_KEY/NTL-LTER_Lake_Chemistry_Nutrients_PeterPaul_Processed.csv"),
+PeterPaul.chem.nutrients <- 
+  read.csv(here 
+("Data/Processed_KEY/NTL-LTER_Lake_Chemistry_Nutrients_PeterPaul_Processed.csv"),
      stringsAsFactors = TRUE)
 
 Niwot_ridge_litter <- read.csv(here
@@ -164,7 +166,7 @@ higher, especially in the summer.
 
 7. [Niwot Ridge] Now, plot the same plot but with NLCD classes separated into three facets rather than separated by color. 
 
-```{r Plot litter}
+```{r Plot litter 2}
 #6 Here I filtered the dataset to include only the "Needles" functional group
 #and create the plot
 
