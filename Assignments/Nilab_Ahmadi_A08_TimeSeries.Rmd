@@ -354,7 +354,7 @@ to confirm this trend and explore any underlying factors affecting ozone levels.
  GaringerOzone.monthly.ts_deseasonalized <-
    GaringerOzone.monthly.ts- seasonal_component
  #16
- # Running the Mann-Kendall test on the deseasonalized data
+ # Running the Mann-Kendall test on the de-seasonalized data
  mk_result <- mk.test(GaringerOzone.monthly.ts_deseasonalized)
  print(mk_result)
 
