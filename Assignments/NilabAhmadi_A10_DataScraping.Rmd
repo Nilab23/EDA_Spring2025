@@ -100,7 +100,8 @@ maximum_day_use <- NCDEQ_Web %>%
 ```{r create.a.dataframe.from.scraped.data}
 #4 # Converting maximum daily use values into numeric format
 
-months <- c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+months <- c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug",
+            "Sep", "Oct", "Nov", "Dec")
 years <- rep(2020, times = 12)  # Change the year here if needed
 
 # Creating vectors matching the length of months for all water system attributes
